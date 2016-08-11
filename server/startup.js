@@ -1,14 +1,14 @@
 Meteor.startup(() => {
     if (Parties.find().count() === 0) {
     const parties = [{
-        'name': 'Dubstep-Free Zone',
-        'description': 'Fast just got faster with Nexus S.'
+        'name': 'Dinner with family',
+        'description': 'Precious moments.'
     }, {
-        'name': 'All dubstep all the time',
-        'description': 'Get it on!'
+        'name': 'Birthdays',
+        'description': 'Gift of life!'
     }, {
-        'name': 'Savage lounging',
-        'description': 'Leisure suit required. Fierce.'
+        'name': 'Promotions',
+        'description': 'Moving up.'
     }];
 
     parties.forEach((party) => {
