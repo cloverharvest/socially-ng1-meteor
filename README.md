@@ -2,12 +2,12 @@
 Practice app from angular-meteor team.
 
 # Run app
-  $ meteor
+  `$ meteor`
 
 # Run test (Jasmine)
-(Must turn of development server (aka $ meteor) before running the test to avoid error)
+(Must turn of development server (aka `$ meteor`) before running the test to avoid error)
 
-  $ meteor npm run test:watch
+  `$ meteor npm run test:watch`
 
 # Autopublish Issue
   Keep autopublish for development and testing.
@@ -15,4 +15,4 @@ Practice app from angular-meteor team.
 
   Remove before deplying for production with:
 
-  $ meteor remove autopublish
+  `$ meteor remove autopublish`
