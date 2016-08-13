@@ -14,7 +14,7 @@ class PartyAdd {
 
     submit() {
         Parties.insert(this.party);
-        this.reset;
+        this.reset();
     }
 
     reset() {
