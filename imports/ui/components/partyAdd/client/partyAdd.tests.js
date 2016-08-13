@@ -4,51 +4,50 @@ import 'angular-mocks';
 
 describe('PartyAdd', () => {
     beforeEach(() => {
-        window.module(PartyAdd);
+    window.module(PartyAdd);
+});
+
+describe('controller', () => {
+    let controller;
+const party = {
+    name: 'Foo',
+    description: 'Birthday of Foo'
+};
+
+beforeEach(() => {
+    inject(($rootScope, $componentController) => {
+    controller = $componentController(PartyAdd, {
+        $scope: $rootScope.$new(true)
     });
+});
+});
 
-    describe('controller', () => {
-        let controller;
-        const party = {
-            name: 'Elmer Fudd',
-            description: 'Birthday of Elmer Fudd'
-        };
+describe('reset()', () => {
+    it('should clean up party object', () => {
+    controller.party = party;
+    controller.reset();
 
-        beforeEach(() => {
-            inject(($rootScope, $componentController) => [
-                controller = $componentController(PartyAdd, {
-                    $scope: $rootScope.$new(true)
-                });
-            });
-        });
+    expect(controller.party).toEqual({});
+});
+});
 
-        describe('reset()', () => {
-            it('should clean up party object', () => {
-                controller.party = party;
-                controller.reset();
+describe('submit()', () => {
+    beforeEach(() => {
+    spyOn(Parties, 'insert');
+    spyOn(controller, 'reset').and.callThrough();
 
-                expect(controller.party).toEqual({});
-            });
+    controller.party = party;
 
-        });
+    controller.submit();
+});
 
-        describe('submit()', () => {
-            beforeEach(() => {
-                spyOn('Parties, 'insert');
-                spyOn(controller, 'reset').and.callThrough();
+it('should insert a new party', () => {
+    expect(Parties.insert).toHaveBeenCalledWith(party);
+});
 
-                controller.party = party;
-
-                controller.submit();
-        });
-
-        it('should insert a new party', () => {
-            expect(Parties.insert).toHaveBeenCalledWith(party);
-        });
-
-        it('should call a reset()', () => {
-            expect(controller.reset).toHaveBeenCalled();
-        });
-      });
-    });
-  });
+it('should call reset()', () => {
+    expect(controller.reset).toHaveBeenCalled();
+});
+});
+});
+});
