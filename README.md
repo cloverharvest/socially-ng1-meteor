@@ -5,14 +5,14 @@ Practice app from angular-meteor team.
   `$ meteor`
 
 # Run test (Jasmine)
-(Must turn of development server (aka `$ meteor`) before running the test to avoid error)
+Must turn of development server (i.e. `$ meteor`) before running the test to avoid errors.
 
   `$ meteor npm run test:watch`
 
-# Autopublish Issue
-  Keep autopublish for development and testing.
-    (If removed during development, list of todos(aka parties inserted) do not show but are added to the database
+### Autopublish Issue
+  Keep autopublish while in development and testing.
+  If autopublish is removed during development, the list of todos(aka parties inserted) are added to the database **but** do not show on the view.
 
-  Remove before deplying for production with:
+  Remove before deploying for production with:
 
   `$ meteor remove autopublish`
