@@ -28,7 +28,7 @@ export default angular.module(name, [
 function config($locationProvider, $urlRouterProvider) {
     'ngInject';
 
-    $locationProvider.html5Model(true);
+    $locationProvider.html5Mode(true);
 
     $urlRouterProvider.otherwise('/parties');
 }
