@@ -33,7 +33,8 @@ export default angular.module(name, [
     template,
     controllerAs: name,
     controller: PartiesList
-}).config(config);
+})
+    .config(config);
 
 function config($stateProvider) {
     'ngInject';
