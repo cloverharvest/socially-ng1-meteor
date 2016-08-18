@@ -4,10 +4,18 @@ Practice app from angular-meteor team.
 # Run app
   `$ meteor`
 
-# Run test (Jasmine)
+## Run test (Jasmine)
 Must turn of development server (i.e. `$ meteor`) before running the test to avoid errors.
 
   `$ meteor npm run test:watch`
+
+## User operations
+
+   `$ meteor add accounts-password`
+
+## Social login feature
+
+   `meteor add accounts-facebook accounts-twitter accounts-github`
 
 ### Autopublish Issue
   Keep autopublish while in development and testing.

@@ -23,3 +23,6 @@ velocity:console-reporter
 autopublish
 accounts-password
 dotansimha:accounts-ui-angular
+accounts-facebook
+accounts-twitter
+accounts-github
