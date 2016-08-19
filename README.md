@@ -19,7 +19,10 @@ Turn off development server (i.e. `$ meteor`) before running the test to avoid e
    `meteor add accounts-facebook accounts-twitter accounts-github`
 
 ### Autopublish Issue
-  Keep autopublish while in development and testing.
+  Autopuplish pushes all of the database into the client.
+
+  Keep autopublish while in development and testing, or at least until we determine which parties we want to send to the client.
+
   If autopublish is removed during development, the list of todos(aka parties inserted) are added to the database **but** do not show on the view.
 
   Remove before deploying for production with:
