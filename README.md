@@ -11,6 +11,7 @@ Must turn of development server (i.e. `$ meteor`) before running the test to avo
 
 ## User operations
 
+   `$ meteor remove insecure`
    `$ meteor add accounts-password`
 
 ## Social login feature
