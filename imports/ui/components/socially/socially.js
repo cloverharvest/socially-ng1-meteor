@@ -24,7 +24,8 @@ export default angular.module(name, [
     controllerAs: name,
     controller: Socially
 })
-    .config(config);
+    .config(config)
+    .run(run);
 
 function config($locationProvider, $urlRouterProvider) {
     'ngInject';
