@@ -5,7 +5,7 @@ Practice app from angular-meteor team.
   `$ meteor`
 
 ## Run test (Jasmine)
-Must turn of development server (i.e. `$ meteor`) before running the test to avoid errors.
+Turn off development server (i.e. `$ meteor`) before running the test to avoid errors.
 
   `$ meteor npm run test:watch`
 
