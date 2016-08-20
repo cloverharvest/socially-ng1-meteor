@@ -6,7 +6,7 @@ Parties.allow({
     insert(userId, party) {
         return userId && party.owner === userId;
     },
-    update(userId, party, fields, modifier) {
+    update(userId, party) {
         return userId && party.owner === userId;
     },
     remove(userId, party) {
