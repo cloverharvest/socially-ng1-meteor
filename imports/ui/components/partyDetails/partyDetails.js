@@ -15,6 +15,8 @@ class PartyDetails {
 
         this.partyId = $stateParams.partyId;
 
+        this.subscribe('parties');
+
         this.helpers({
             party() {
                 return Parties.findOne({
@@ -30,7 +32,8 @@ class PartyDetails {
         }, {
             $set: {
                 name: this.party.name,
-                description: this.party.description
+                description: this.party.description,
+                public: this.party.public
             }
         }, (error) => {
             if (error) {
