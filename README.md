@@ -6,6 +6,10 @@ Practice app from angular-meteor team.
 
 ## Run test (Jasmine)
 Turn off development server (i.e. `$ meteor`) before running the test to avoid errors.
+Running two copies of Meteor in the same application directory
+will not work. If something else is using port 3000, you can
+specify an alternative port with --port <port>.
+
 
   `$ meteor npm run test:watch`
 
