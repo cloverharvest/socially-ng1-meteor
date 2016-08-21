@@ -8,3 +8,10 @@ The Party ID you selected is: {{ partyDetails.partyId }}
 </form>
 <br/>
 <button ui-sref="parties">Back</button>
+
+<ul>
+    Users:
+    <li ng-repeat="user in partyDetails.users">
+        <div>{{ user.emails[0].address }}</div>
+    </li>
+</ul>

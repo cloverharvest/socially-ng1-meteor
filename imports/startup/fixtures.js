@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { Parties } from '../imports/api/parties';
+import { Parties } from '../api/parties';
 
 Meteor.startup(() => {
     if (Parties.find().count() === 0) {
@@ -16,6 +16,6 @@ Meteor.startup(() => {
 
     parties.forEach((party) => {
         Parties.insert(party)
-    });
-  }
+        });
+    }
 });
