@@ -11,8 +11,8 @@
    describe('controller', () => {
        let controller;
        const party = {
-       name: 'Joe',
-       description: 'Birthday of Joe',
+       name: 'Foo',
+       description: 'Birthday of Foo',
        public: true
    };
    const user = {
@@ -21,21 +21,21 @@
 
    beforeEach(() => {
        inject(($rootScope, $componentController) => {
-       controller = $componentController(PartyAdd, {
-           $scope: $rootScope.$new(true)
+           controller = $componentController(PartyAdd, {
+               $scope: $rootScope.$new(true)
+           });
        });
-   });
 
-   spyOn(Meteor, 'user').and.returnValue(user);
+      spyOn(Meteor, 'user').and.returnValue(user);
    });
 
    describe('reset()', () => {
        it('should clean up party object',() => {
-       controller.party = party;
-       controller.reset();
+           controller.party = party;
+           controller.reset();
 
-       expect(controller.party).toEqual({});
-   });
+           expect(controller.party).toEqual({});
+        });
    });
 
    describe('submit()', () => {
